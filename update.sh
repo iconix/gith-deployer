@@ -1,7 +1,5 @@
-echo '>>> Updating deploy files'
-curl https://raw.githubusercontent.com/iconix/tn/master/deploy/hook.js > hook.js
-curl https://raw.githubusercontent.com/iconix/tn/master/deploy/hook.sh > hook.sh
-curl https://raw.githubusercontent.com/iconix/tn/master/deploy/package.json > package.json
+echo '>>> Cloning gith-deployer repo'
+npm run update
 
 echo '>>> Pulling pre-built logspout router'
 docker pull progrium/logspout

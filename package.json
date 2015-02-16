@@ -6,7 +6,8 @@
   "scripts": {
     "start": "./node_modules/.bin/forever -a -l deploy.log start hook.js",
     "re-start": "./node_modules/.bin/forever -a -l deploy.log restart hook.js",
-    "stop": "./node_modules/.bin/forever stop hook.js"
+    "stop": "./node_modules/.bin/forever stop hook.js",
+    "update": "git clone https://github.com/iconix/gith-deployer.git"
   },
   "repository": {
     "type": "git",

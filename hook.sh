@@ -3,6 +3,7 @@
 echo Running $BASH_SOURCE
 set | egrep GIT
 echo PWD is $PWD
+echo HOME is $HOME
 
 # Adapted from:
 # http://www.hiddentao.com/archives/2013/12/26/automated-deployment-with-docker-lessons-learnt/
