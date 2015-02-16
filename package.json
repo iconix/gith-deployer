@@ -7,7 +7,7 @@
     "start": "./node_modules/.bin/forever -a -l deploy.log start hook.js",
     "re-start": "./node_modules/.bin/forever -a -l deploy.log restart hook.js",
     "stop": "./node_modules/.bin/forever stop hook.js",
-    "clone": "git clone https://github.com/iconix/gith-deployer.git"
+    "update-deploy": "curl https://raw.githubusercontent.com/iconix/tn/master/deploy/hook.js > hook.js && curl https://raw.githubusercontent.com/iconix/tn/master/deploy/hook.sh > hook.sh && curl https://raw.githubusercontent.com/iconix/tn/master/deploy/package.json > package.json && curl https://raw.githubusercontent.com/iconix/tn/master/deploy/setup.sh > setup.sh && curl https://raw.githubusercontent.com/iconix/tn/master/deploy/update.sh > update.sh"
   },
   "repository": {
     "type": "git",
