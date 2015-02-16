@@ -7,11 +7,11 @@
     "start": "./node_modules/.bin/forever -a -l deploy.log start hook.js",
     "re-start": "./node_modules/.bin/forever -a -l deploy.log restart hook.js",
     "stop": "./node_modules/.bin/forever stop hook.js",
-    "update-deploy": "curl https://raw.githubusercontent.com/iconix/tn/master/deploy/hook.js > hook.js && curl https://raw.githubusercontent.com/iconix/tn/master/deploy/hook.sh > hook.sh && curl https://raw.githubusercontent.com/iconix/tn/master/deploy/package.json > package.json && curl https://raw.githubusercontent.com/iconix/tn/master/deploy/setup.sh > setup.sh && curl https://raw.githubusercontent.com/iconix/tn/master/deploy/update.sh > update.sh"
+    "update-deploy": "curl https://raw.githubusercontent.com/iconix/gith-deployer/master/hook.js > hook.js && curl https://raw.githubusercontent.com/iconix/gith-deployer/master/hook.sh > hook.sh && curl https://raw.githubusercontent.com/iconix/gith-deployer/master/package.json > package.json && curl https://raw.githubusercontent.com/iconix/gith-deployer/master/setup.sh > setup.sh && curl https://raw.githubusercontent.com/iconix/gith-deployer/master/update.sh > update.sh"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/iconix/tn.git"
+    "url": "https://github.com/iconix/gith-deployer.git"
   },
   "keywords": [
     "deploy",
@@ -21,9 +21,9 @@
   ],
   "author": "iconix",
   "bugs": {
-    "url": "https://github.com/iconix/tn/issues"
+    "url": "https://github.com/iconix/gith-deployer/issues"
   },
-  "homepage": "https://github.com/iconix/tn",
+  "homepage": "https://github.com/iconix/gith-deployer",
   "dependencies": {
     "bunyan": "^1.1.3",
     "forever": "^0.11.1",
