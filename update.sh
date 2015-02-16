@@ -1,5 +1,5 @@
 echo '>>> Cloning gith-deployer repo'
-npm run update
+npm run clone
 
 echo '>>> Pulling pre-built logspout router'
 docker pull progrium/logspout
