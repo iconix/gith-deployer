@@ -13,3 +13,4 @@ newgrp docker
 
 echo '>>> Making shell scripts executable'
 chmod a+x hook.sh
+chmod a+x update.sh
