@@ -3,7 +3,6 @@
 echo Running $BASH_SOURCE
 set | egrep GIT
 echo PWD is $PWD
-echo HOME is $HOME
 
 # Adapted from:
 # http://www.hiddentao.com/archives/2013/12/26/automated-deployment-with-docker-lessons-learnt/
@@ -22,7 +21,7 @@ echo $CID
 
 echo '>>> Building new image'
 # Analyzing log files, since I don't want skipped unknown instructions to cause build to fail with error (see https://github.com/docker/docker/issues/6338)
-docker build -t iconix/tn github.com/iconix/tn | tee /tmp/docker_build_result.log
+docker build -t iconix/tn --force-rm=true github.com/iconix/tn | tee /tmp/docker_build_result.log
 RESULT=$(cat /tmp/docker_build_result.log | tail -n 1)
 if [[ "$RESULT" != *Successfully* ]];
 then
