@@ -40,9 +40,10 @@ sleep 5
 
 # We remove any container which:
 #   1) is not the data-only container and
-#   2) has exited
+#   2) is not the docker-fluentd container and
+#   3) has exited
 echo '>>> Cleaning up containers'
-docker ps -a | grep -v "tn_data" | grep "Exit" | awk '{print $1}' | while read -r id ; do
+docker ps -a | grep -v -P -e "tn_data|tn_fluentd" | grep "Exit" | awk '{print $1}' | while read -r id ; do
   docker rm $id
 done
 
